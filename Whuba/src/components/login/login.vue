@@ -1,30 +1,29 @@
 <template>
-    <div class="login-wrapper">
-        <Input class="user-name" v-model="value1" icon="person" placeholder="请输入账号"></Input>
-        <Input class="user-password" type="password" v-model="value2" icon="locked" placeholder="请输入密码"></Input>
-        <Button class="login-button" type="primary" :loading="loading" @click="toLoading">
-            <span v-if="!loading">登录</span>
-            <span v-else>登录中...</span>
-        </Button>
-        
-    </div>
+  <div class="login-wrapper">
+    <Input class="user-name" v-model="value1" icon="person" placeholder="请输入账号"></Input>
+    <Input class="user-password" type="password" v-model="value2" icon="locked" placeholder="请输入密码"></Input>
+    <Button class="login-button" type="primary" :loading="loading" @click="toLoading">
+      <span v-if="!loading">登录</span>
+      <span v-else>登录中...</span>
+    </Button>
+  </div>
 </template>
 
 <script>
-    export default {
-      data() {
-        return {
-          value1: '',
-          value2: '',
-          loading: false
-        };
-      },
-      methods: {
-        toLoading() {
-          this.loading = true;
-        }
+  export default {
+    data() {
+      return {
+        value1: '',
+        value2: '',
+        loading: false
+      };
+    },
+    methods: {
+      toLoading() {
+        this.loading = true;
       }
-    };
+    }
+  };
 </script>
 
 <style>
@@ -32,8 +31,6 @@ html {
   width: 100%;
   height: 100%;
 }
-
-
 
 .login-wrapper {
   display: inline-block;

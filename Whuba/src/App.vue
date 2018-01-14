@@ -10,10 +10,12 @@
 </template>
 
 <script>
+  import register from './components/register/register';
   import login from './components/login/login';
 
   export default {
     components: {
+      register,
       login
     }
   };
