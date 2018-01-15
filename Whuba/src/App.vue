@@ -44,11 +44,14 @@
 }
 
 .index-tab {
-  display: inline-block;
-  position: relative;
-  top: 250px;
   width: 144px;
   height: 35px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -72px;
+  margin-top: -17px;
   font-size: 20px;
 }
 </style>

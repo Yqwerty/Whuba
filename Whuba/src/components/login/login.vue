@@ -6,10 +6,13 @@
       <span v-if="!loading">登录</span>
       <span v-else>登录中...</span>
     </Button>
+    <news ref="news"></news>
   </div>
 </template>
 
 <script>
+  import news from '../News/news';
+
   export default {
     data() {
       return {
@@ -21,7 +24,14 @@
     methods: {
       toLoading() {
         this.loading = true;
+        // this.$router.push('../register');   // 切换到register
+        setTimeout(() => {
+          this.$refs.news.show();
+        }, 500);
       }
+    },
+    components: {
+      news
     }
   };
 </script>

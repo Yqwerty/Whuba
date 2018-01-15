@@ -2,9 +2,10 @@
   <div class="login-wrapper">
     <Input class="user-name" v-model="value1" icon="person" placeholder="请输入账号"></Input>
     <Input class="user-password" type="password" v-model="value2" icon="locked" placeholder="请输入密码"></Input>
+    <Input class="user-password" type="password" v-model="value3" icon="locked" placeholder="请再次输入密码"></Input>
     <Button class="login-button" type="primary" :loading="loading" @click="toLoading">
-      <span v-if="!loading">登录</span>
-      <span v-else>登录中...</span>
+      <span v-if="!loading">注册</span>
+      <span v-else>注册中...</span>
     </Button>
   </div>
 </template>
@@ -15,6 +16,7 @@
       return {
         value1: '',
         value2: '',
+        value3: '',
         loading: false
       };
     },
