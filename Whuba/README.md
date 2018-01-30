@@ -1,6 +1,7 @@
 # whuba
 
 > A Vue.js project
+Yy
 
 ## Build Setup
 

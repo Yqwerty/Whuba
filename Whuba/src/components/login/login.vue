@@ -6,7 +6,7 @@
       <span v-if="!loading">登录</span>
       <span v-else>登录中...</span>
     </Button>
-    <news ref="news"></news>
+    <news ref="news" :loading="loading" @changeLoading="changeLoading"></news>
   </div>
 </template>
 
@@ -28,6 +28,9 @@
         setTimeout(() => {
           this.$refs.news.show();
         }, 500);
+      },
+      changeLoading() {
+        this.loading = this.showFlag;
       }
     },
     components: {
